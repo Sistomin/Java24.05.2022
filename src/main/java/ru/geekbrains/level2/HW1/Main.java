@@ -13,7 +13,7 @@ package ru.geekbrains.level2.HW1;
 public class Main {
     public static void main(String[] args) {
 
-        Player CatVasy = new Cat("Вася", 10,15)
+        Player CatVasy = new Cat("Вася", 10,15);
 
     }
 }
