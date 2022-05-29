@@ -1,15 +1,16 @@
 package ru.geekbrains.level2.HW1;
 
-public class Robot implements Play{
+public class Human implements Play{
     private String name;
     private int maxRun;
     private int maxJump;
     private boolean success = true;
 
-    public Robot(String name, int maxRun, int maxJump) {
+    public Human(String name, int maxRun, int maxJump) {
         this.name = name;
         this.maxRun = maxRun;
         this.maxJump = maxJump;
+
     }
 
     public String getName() {
@@ -39,11 +40,11 @@ public class Robot implements Play{
 
     @Override
     public void run() {
-        System.out.println("Робот по имени " + name + " может пробежать " + maxRun + "м.");
+        System.out.println("Человек по имени " + name + " может пробежать " + maxRun + "м.");
     }
 
     @Override
     public void jump() {
-        System.out.println("Робот по имени " + name + " может прыгнуть на " + maxJump + "м.");
+        System.out.println("Человек по имени " + name + " может прыгнуть на " + maxJump + "м.");
     }
 }

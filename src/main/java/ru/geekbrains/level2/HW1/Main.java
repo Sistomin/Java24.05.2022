@@ -10,11 +10,40 @@ package ru.geekbrains.level2.HW1;
 //4. * У препятствий есть длина (для дорожки) или высота (для стены), а участников ограничения
 //на бег и прыжки. Если участник не смог пройти одно из препятствий, то дальше по списку он
 //препятствий не идет.
+
+
+
 public class Main {
     public static void main(String[] args) {
 
-        Player CatVasy = new Cat("Вася", 10,15);
+        Cat cat1 = new Cat("Васька", 50, 7);
+        Human human1 = new Human("Василий", 150, 2);
+        Robot robot1 = new Robot("Владлен", 500, 50);
+        Cat cat2 = new Cat("Шкода", 25, 5);
+        Human human2 = new Human("Иван", 100, 1);
+        Robot robot2 = new Robot("Джон", 300, 30);
 
+        Play[] plays = {cat1, cat2, robot1, robot2, human1, human2};
+
+        for (Play play : plays) {
+            play.run();
+            play.jump();
+        }
+
+        Road r1 = new Road(50);
+        Road r2 = new Road(200);
+        Wall w1 = new Wall(2);
+        Wall w2 = new Wall(5);
+
+        Ttrial[] trials = {r1, r2, w1, w2};
+
+
+        /*for (Ttrial trial : trials) {
+            trial.runRoad();
+            trial.jumpWall();
+
+        }*/
     }
-}
 
+
+}

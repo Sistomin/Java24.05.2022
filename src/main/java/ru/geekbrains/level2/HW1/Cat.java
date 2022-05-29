@@ -1,42 +1,51 @@
 package ru.geekbrains.level2.HW1;
 
-public class Cat {
+public class Cat implements Play {
+
         private String name;
-        private int maxLength;
-        private int maxHeight;
+        private int maxRun;
+        private int maxJump;
         private boolean success = true;
 
-        public Cat(String name, int maxLength, int maxHeight) {
+        public Cat(String name, int maxRun, int maxJump) {
             this.name = name;
-            this.maxLength = maxLength;
-            this.maxHeight = maxHeight;
+            this.maxRun = maxRun;
+            this.maxJump = maxJump;
         }
 
-        public String runCat(){
-            return "Кот по имени " + name + " может пробежать " + maxHeight;
-        }
-        public String jumpCat(){
-            return "Кот по имени " + name + " может прыгнуть в высоту " + maxHeight;
-        }
 
         public String getName() {
             return name;
         }
 
-        public int getMaxLength() {
-            return maxLength;
+        public int getMaxRun() {
+            return maxRun;
         }
 
-        public int getMaxHeight() {
-            return maxHeight;
+        public int getMaxJump() {
+            return maxJump;
         }
 
-        public boolean isSuccess() {
-            return success;
-        }
+    public boolean isSuccess() {
+        return success;
+    }
 
-        public void setSuccess(boolean success) {
-            this.success = success;
-        }
+    @Override
+    public boolean getSuccess() {
+        return success;
+    }
 
-}
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+    @Override
+        public void run(){
+            System.out.println("Кот по имени " + name + " может пробежать " + maxRun + "м.");
+        }
+        @Override
+        public void jump(){
+            System.out.println("Кот по имени " + name + " может прыгнуть на " + maxJump + "м.");
+        }
+    }
+
